@@ -59,11 +59,11 @@ const StyledForm = styled.form`
 `
 const StyledInput = styled.input`
    width:100%;
-   border: 1px solid #cccccc; //цвет рамки
-   border-radius: 3px; //закругление углов (общее)   
-   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
-   height: 30px; // высота на свое усмотрение     
-   font-size: 13px; // Размер шрифта
+   border: 1px solid #cccccc; 
+   border-radius: 3px;
+   outline: none; 
+   height: 30px;    
+   font-size: 13px;
    box-sizing: border-box;
    padding: 0 10px;
    margin-top: 20px;
@@ -72,11 +72,11 @@ const StyledButton = styled.input`
    background-color: #4997D0;
    color: #ffffff;
    width:100%;
-   border: 1px solid #cccccc; //цвет рамки
-   border-radius: 3px; //закругление углов (общее)   
-   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
-   height: 30px; // высота на свое усмотрение     
-   font-size: 13px; // Размер шрифта
+   border: 1px solid #cccccc; 
+   border-radius: 3px; 
+   outline: none; 
+   height: 30px;   
+   font-size: 13px; 
    box-sizing: border-box;
    margin-top: 20px;
    &:hover{
