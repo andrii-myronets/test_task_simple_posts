@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+
+import { Footer } from "./commons/Footer";
+import { Header } from "./commons/Header";
+import { Modal } from './components/Modal';
+import { PostsList } from './components/PostsList';
+import { selectModalIsOpen } from './store/modal/selectors';
+import { getPosts } from './store/postsList/operation';
+
 
 function App() {
+  const dispatch = useDispatch();
+  const isOpenModal = useSelector(selectModalIsOpen)
+
+  useEffect(() => {
+    dispatch(getPosts())    
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header/>
+      <PostsList/>
+      <Footer/>
+      {isOpenModal && <Modal/>}
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+ min-height: 80vh;
+ max-width:90%;
+ margin: 0 auto;
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 200px;
+ `
