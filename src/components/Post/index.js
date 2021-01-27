@@ -47,6 +47,8 @@ const Comments = styled.div`
   font-size:13px;
   @media (min-width: 481px){  
     padding: 0;
+    overflow: auto;
+    max-height: 60vh;
   }
 `
 const Comment = styled.div`

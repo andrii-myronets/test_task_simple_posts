@@ -56,7 +56,9 @@ min-height:100%;
 @media (min-width: 481px){
   min-width:30%;
   min-height:30%;  
+  max-height:80%;  
   max-width:70%;
+  overflow: none;
   }
 `
 const CloseBtn = styled.div`
